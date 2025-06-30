@@ -191,16 +191,17 @@ export default function RangeSlider({
         })
         .onUpdate((event) => {
           const newPosition = startLeftPosition.value + event.translationX;
-          leftPosition.value = Math.min(
-            newPosition,
-            rightPosition.value - thumbSize
+          leftPosition.value = clampPosition(
+            Math.min(newPosition, rightPosition.value - thumbSize),
+            0,
+            trackWidth
           );
-          runOnJS(updateRangeValues)();
+          updateRangeValues();
         })
         .onFinalize(() => {
           isLeftThumbActive.value = withTiming(0);
         }),
-    [thumbSize, updateRangeValues]
+    [thumbSize, trackWidth, updateRangeValues]
   );
 
   const rightPanGesture = useMemo(
@@ -212,16 +213,17 @@ export default function RangeSlider({
         })
         .onUpdate((event) => {
           const newPosition = startRightPosition.value + event.translationX;
-          rightPosition.value = Math.max(
-            newPosition,
-            leftPosition.value + thumbSize
+          rightPosition.value = clampPosition(
+            Math.max(newPosition, leftPosition.value + thumbSize),
+            0,
+            trackWidth
           );
           updateRangeValues();
         })
         .onFinalize(() => {
           isRightThumbActive.value = withTiming(0);
         }),
-    [thumbSize, updateRangeValues]
+    [thumbSize, trackWidth, updateRangeValues]
   );
 
   const tapGesture = useMemo(
