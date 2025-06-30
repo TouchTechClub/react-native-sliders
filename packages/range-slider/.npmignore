@@ -1,0 +1,33 @@
+# Development files
+*.log
+.DS_Store
+node_modules/
+.vscode/
+.idea/
+
+# TypeScript build files
+*.tsbuildinfo
+tsconfig.json
+
+# Development scripts
+bun.lock
+yarn.lock
+package-lock.json
+
+# Source maps
+*.map
+
+# Test files
+**/*.test.*
+**/*.spec.*
+__tests__/
+coverage/
+
+# Development configs
+.eslintrc.*
+.prettierrc.*
+jest.config.*
+
+# Git files
+.git/
+.gitignore 

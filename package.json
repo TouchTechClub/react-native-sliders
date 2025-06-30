@@ -2,9 +2,6 @@
   "name": "react-native-range-slider",
   "private": true,
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "lint": "expo lint"
   },
@@ -21,6 +18,5 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "packageManager": "bun@1.2.14"
+  ]
 }

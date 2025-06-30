@@ -3,27 +3,16 @@
   "version": "0.0.1",
   "description": "Range slider for React Native",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
+    ".": "./src/index.ts"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsc",
+    "dev": "tsc --watch",
     "clean": "rm -rf dist",
-    "pub:beta": "pnpm publish --no-git-checks --access public --tag beta",
-    "pub:next": "pnpm publish --no-git-checks --access public --tag next",
-    "pub:release": "pnpm publish --access public"
+    "pub:beta": "bun publish --no-git-checks --access public --tag beta",
+    "pub:next": "bun publish --no-git-checks --access public --tag next",
+    "pub:release": "bun publish --access public"
   },
   "dependencies": {},
   "devDependencies": {
@@ -34,7 +23,9 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-web": "*"
+    "react-native-web": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": "*"
   },
   "peerDependenciesMeta": {
     "react-native": {
