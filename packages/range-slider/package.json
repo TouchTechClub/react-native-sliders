@@ -1,7 +1,28 @@
 {
-  "name": "@touchtech/react-native-range-slider",
+  "name": "@touchtechclub/react-native-range-slider",
   "version": "0.0.1",
   "description": "Range slider for React Native",
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "range-slider",
+    "slider",
+    "range",
+    "ui-component",
+    "gesture-handler",
+    "reanimated",
+    "touch",
+    "input",
+    "control",
+    "mobile",
+    "ios",
+    "android",
+    "expo",
+    "typescript",
+    "native",
+    "dual-thumb",
+    "touch-controls"
+  ],
   "license": "MIT",
   "exports": {
     ".": "./src/index.ts"
